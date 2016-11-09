@@ -1,0 +1,59 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+@font-face {
+    font-family: 'Lobster';
+    src: local('Lobster'), url('lobster.woff2') format('woff2'), url('lobster.woff') format('woff'), url('lobster.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    font-family:'Lobster', sans-serif;
+    font-size:20px;
+    height:100%;
+    margin:10px;
+    padding:0px;
+    width:94%;
+}
+
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {    
+	font-size:28px;
+    font-weight:normal;
+    text-align:center;
+}
+
+.poemName {    
+	font-size:24px;
+	text-decoration: underline;
+    text-align:center;
+}
+
+.poemAuthor {    
+	font-size:18px;
+    text-align:right;
+	color:#999;
+	margin:10px 20px;
+}
+
+#refresh{
+	padding: 6px 0;
+	background-color: darkcyan;
+	color: white;
+	text-align: center;
+}
